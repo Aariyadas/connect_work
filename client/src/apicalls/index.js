@@ -6,8 +6,12 @@ export const apiRequest= async (method, url, payload)=>{
     method,
     url,
     data:payload,
+    headers:{
+        authorization: `Bearer ${localStorage.getItem("token")}`
+,
+    }
     });
-    return response;
+    return response.data;
     
     }catch(error){
         return error;

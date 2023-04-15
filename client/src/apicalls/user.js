@@ -11,3 +11,4 @@ export const LoginUser = async (payload) => {
 };
 
 
+export const GetLoggedInUser =async() => apiRequest('get','/api/users/get-current-user')
